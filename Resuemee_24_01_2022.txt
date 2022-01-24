@@ -1,0 +1,16 @@
+Resümee über die vergangene Woche:
+
+* Was ist gut gelaufen?
+-Client-Server-Kommunikation steht soweit, es müssen jedoch noch kleinere Änderungen vorgenommen werden
+
+* Welche Arbeitspakete wurden erledigt?
+-Das Arbeitspaket Client-Server-Kommunikation wurde nun fast vollständig erledigt.
+
+* Welche Probleme sind aufgetreten?
+-Anfangs Probleme mit der Implementierung der Kommunikation -> anfängliche Versuche der Implementierung gescheitert.
+
+* Wie liegt die Gruppe im Zeitplan?
+-Die Gruppe liegt relativ gut im Zeitplan, und in etwa wie erwartet.
+
+*Was wird nächste Woche umgesetzt?
+-Nächste Woche werden die "Move" Methoden der Figuren umgesetzt und mit dem Spielprinzip wird gestartet.
