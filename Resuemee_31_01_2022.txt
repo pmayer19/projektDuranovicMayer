@@ -1,0 +1,14 @@
+*Was ist gut gelaufen?
+-Teils gute Lösungsansätze für Figurenimplementation gefunden, welche sich auch auf andere Figuren übertragen lässt
+
+*Welche Arbeitspakete wurden erledigt?
+-Client-Server-Kommunikation wurde weiter ausgearbeitet, bzw. mit Figurenimplementation wurde gestartet
+
+*Welche Probleme sind aufgetreten?
+-Erste Lösungsansätze konnten nicht wie geplant weiter fortgesetzt werden
+
+*Wie liegt die Gruppe im Zeitplan?
+-Da Client-Server-Kommunikation länger gedauert hat, als erwartet, ist die Gruppe nun etwas im Rückstand
+
+*Was wird bis nächste Woche umgesetzt?
+-Finalisierung des Projektes, Logik des Spiels im Allgemeinen (Überprüfung Schach), fertige Figurenimplementation
