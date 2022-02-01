@@ -1,0 +1,5 @@
+Bericht bis 01.02.2022
+Clientserver Verbindung steht und funktioniert
+Man kann die Figuren jeweils zwischen den Clients hin und herschieben
+Das Hin und herschieben erfolgt noch nicht nach Schachprinzip
+Ziel bis heute: Schachprinzip implementieren
