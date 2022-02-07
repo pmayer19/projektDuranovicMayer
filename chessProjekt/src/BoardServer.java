@@ -49,6 +49,76 @@ public class BoardServer {
         board[7][6] = new Knight(7,6,false);
         board[7][7] = new Rook(7,7,false);
     }
+    public void moveBlackFigures(int sourceX, int sourceY, int targetX, int targetY)
+    {
+        if(board[sourceX][sourceY].getClass().equals(Pawn.class) && board[sourceX][sourceY].isBlack == true)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Rook.class) && board[sourceX][sourceY].isBlack == true)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Knight.class) && board[sourceX][sourceY].isBlack == true)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Bishop.class) && board[sourceX][sourceY].isBlack == true)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(King.class) && board[sourceX][sourceY].isBlack == true)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Queen.class) && board[sourceX][sourceY].isBlack == true)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+
+    }
+
+    public void moveWhiteFigures(int sourceX, int sourceY, int targetX, int targetY)
+    {
+
+        if(board[sourceX][sourceY].getClass().equals(Pawn.class) && board[sourceX][sourceY].isBlack == false)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Rook.class) && board[sourceX][sourceY].isBlack == false)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Knight.class) && board[sourceX][sourceY].isBlack == false)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Bishop.class) && board[sourceX][sourceY].isBlack == false)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(King.class) && board[sourceX][sourceY].isBlack == false)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+        else if(board[sourceX][sourceY].getClass().equals(Queen.class) && board[sourceX][sourceY].isBlack == false)
+        {
+            board[targetX][targetY] = board[sourceX][sourceY];
+            board[sourceX][sourceY] = null;
+        }
+
+    }
 
     public void printBoard() {
 
@@ -96,8 +166,7 @@ public class BoardServer {
                 int targetX = Integer.parseInt(sc.nextLine());
                 System.out.println("Bitte geben sie den targetY Wert ein");
                 int targetY = Integer.parseInt(sc.nextLine());
-
-
+                boardServer.moveBlackFigures(sourceX,sourceY,targetX,targetY);
                 int countdown = 8;
                 for (int i = 0; i < board.length; i++) {
                     out.println("");
@@ -120,7 +189,7 @@ public class BoardServer {
                 int cSourceY = Integer.parseInt(in.readLine());
                 int cTargetX = Integer.parseInt(in.readLine());
                 int cTargetY = Integer.parseInt(in.readLine());
-
+                boardServer.moveWhiteFigures(cSourceX,cSourceY,cTargetX,cTargetY);
                 boardServer.printBoard();
                 System.out.println("0...Weitermachen");
                 System.out.println("1...Spiel abbrechen");
