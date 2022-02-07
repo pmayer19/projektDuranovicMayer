@@ -51,22 +51,22 @@ public class BoardServer {
     }
     public void moveBlackFigures(int sourceX, int sourceY, int targetX, int targetY)
     {
-        if(board[sourceX][sourceY].getClass().equals(Pawn.class) && board[sourceX][sourceY].isBlack == true)
+        if(board[sourceX][sourceY].getClass().equals(Pawn.class) && board[sourceX][sourceY].isBlack == true && board[sourceX][sourceY].moveBlack(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Rook.class) && board[sourceX][sourceY].isBlack == true)
+        else if(board[sourceX][sourceY].getClass().equals(Rook.class) && board[sourceX][sourceY].isBlack == true &&board[sourceX][sourceY].moveBlack(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Knight.class) && board[sourceX][sourceY].isBlack == true)
+        else if(board[sourceX][sourceY].getClass().equals(Knight.class) && board[sourceX][sourceY].isBlack == true &&board[sourceX][sourceY].moveBlack(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Bishop.class) && board[sourceX][sourceY].isBlack == true)
+        else if(board[sourceX][sourceY].getClass().equals(Bishop.class) && board[sourceX][sourceY].isBlack == true &&board[sourceX][sourceY].moveBlack(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
@@ -76,7 +76,7 @@ public class BoardServer {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Queen.class) && board[sourceX][sourceY].isBlack == true)
+        else if(board[sourceX][sourceY].getClass().equals(Queen.class) && board[sourceX][sourceY].isBlack == true &&board[sourceX][sourceY].moveBlack(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
@@ -87,22 +87,22 @@ public class BoardServer {
     public void moveWhiteFigures(int sourceX, int sourceY, int targetX, int targetY)
     {
 
-        if(board[sourceX][sourceY].getClass().equals(Pawn.class) && board[sourceX][sourceY].isBlack == false)
+        if(board[sourceX][sourceY].getClass().equals(Pawn.class) && board[sourceX][sourceY].isBlack == false && board[sourceX][sourceY].moveWhite(targetX,targetY,sourceX,sourceY) == true )
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Rook.class) && board[sourceX][sourceY].isBlack == false)
+        else if(board[sourceX][sourceY].getClass().equals(Rook.class) && board[sourceX][sourceY].isBlack == false && board[sourceX][sourceY].moveWhite(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Knight.class) && board[sourceX][sourceY].isBlack == false)
+        else if(board[sourceX][sourceY].getClass().equals(Knight.class) && board[sourceX][sourceY].isBlack == false && board[sourceX][sourceY].moveWhite(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Bishop.class) && board[sourceX][sourceY].isBlack == false)
+        else if(board[sourceX][sourceY].getClass().equals(Bishop.class) && board[sourceX][sourceY].isBlack == false && board[sourceX][sourceY].moveWhite(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
@@ -112,7 +112,7 @@ public class BoardServer {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
         }
-        else if(board[sourceX][sourceY].getClass().equals(Queen.class) && board[sourceX][sourceY].isBlack == false)
+        else if(board[sourceX][sourceY].getClass().equals(Queen.class) && board[sourceX][sourceY].isBlack == false && board[sourceX][sourceY].moveWhite(targetX,targetY,sourceX,sourceY) == true)
         {
             board[targetX][targetY] = board[sourceX][sourceY];
             board[sourceX][sourceY] = null;
@@ -122,10 +122,10 @@ public class BoardServer {
 
     public void printBoard() {
 
-        int countdown = 8;
+        int countdown = 0;
         for (int i = 0; i < board.length; i++) {
             System.out.println("");
-            System.out.print(countdown--);
+            System.out.print("x" + countdown++);
             for (int j = 0; j < board.length; j++) {
                 if (board[i][j] == null) {
                     System.out.print("  \u2009-  \u2009|");
@@ -138,7 +138,7 @@ public class BoardServer {
             }
         }
         System.out.println("");
-        System.out.println("   a      b      c     d      e     f      g      h");
+        System.out.println("    y0     y1     y2    y3     y4    y5     y6     y7");
     }
 
     public static void main(String[] args) throws IOException {
@@ -167,10 +167,10 @@ public class BoardServer {
                 System.out.println("Bitte geben sie den targetY Wert ein");
                 int targetY = Integer.parseInt(sc.nextLine());
                 boardServer.moveBlackFigures(sourceX,sourceY,targetX,targetY);
-                int countdown = 8;
+                int countdown = 0;
                 for (int i = 0; i < board.length; i++) {
                     out.println("");
-                    out.print(countdown--);
+                    out.print("x" + countdown++);
                     for (int j = 0; j < board.length; j++) {
                         if (board[i][j] == null) {
                             out.print("  \u2009-  \u2009|");
@@ -183,7 +183,7 @@ public class BoardServer {
                     }
                 }
                 out.println("");
-                out.println("   a      b      c     d      e     f      g      h");
+                out.println("     y0     y1     y2    y3     y4    y5     y6     y7");
                 //out.println(eing);
                 int cSourceX = Integer.parseInt(in.readLine());
                 int cSourceY = Integer.parseInt(in.readLine());
