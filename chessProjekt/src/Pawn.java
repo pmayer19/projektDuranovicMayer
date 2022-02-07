@@ -36,7 +36,6 @@ public class Pawn extends Figure{
         }
         return b;
     }
-
     @Override
     public boolean moveWhite(int toCol, int toRow, int fromCol, int fromRow) {
         boolean b = false;

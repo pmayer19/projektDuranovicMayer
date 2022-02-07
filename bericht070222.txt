@@ -1,0 +1,8 @@
+bericht bis 07.02.2022(ProjektEnde):
+Es konnte das meiste entsprechend umgesetzt werden:
+Pawn(Bauer) perfekt nach Schachlogik umgesetzt
+Knight(Springer) perfekt nach Schachlogik umgesetzt
+Rook(Turm)bewegt sich richtig, schlägt nur gegnerische Figuren und nicht seine eigenen Mates, Problem: kann über eigene Mates springen
+Bishop(Läufer) bewegt sich richtig, schlägt nur gegnerische Figuren und nicht seine eigenen Mates, Problem: kann über eigene Mates springen
+Queen(Dame) bewegt sich richtig, schlägt nur gegnerische Figuren und nicht seine eigenen Mates, Problem: kann über eigene Mates springen
+King(König) perfekt nach Schachlogik umgesetzt.

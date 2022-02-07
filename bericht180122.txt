@@ -1,0 +1,6 @@
+Bericht bis 18.02.2022:
+Gruppeinteilung fertig
+Projektplan erstellt
+Erstellung der Versionwerwaltungabgeschlossen
+Beginn Programmierung
+Aufsetzten des grapischen Spielfelds in der Konsole
