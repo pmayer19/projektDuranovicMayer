@@ -3,7 +3,6 @@ public class Queen extends Figure{
         super(x, y, isBlack);
     }
 
-
     @Override
     public String toString() {
         if(isBlack == true)
